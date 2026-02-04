@@ -2,7 +2,7 @@
 A CNN Computer Vision Digit Recognizer (MNIST) Pipeline
 
 PyTorch solution for Kaggle’s **Digit Recognizer** competition using a compact CNN and **Optuna** hyperparameter tuning.  
-The workflow includes: data loading → preprocessing/normalization → optional affine augmentation → tuning → cross-validation → final training → `submission.csv`.
+The workflow includes: data loading → preprocessing/normalization → optional affine augmentation → tuning → cross-validation → final training → submission.
 
 ---
 
@@ -17,8 +17,6 @@ The workflow includes: data loading → preprocessing/normalization → optional
 
 - `model.ipynb`: end-to-end notebook (tuning + CV + final training + submission generation)
 - `data/`: Kaggle CSVs (`train.csv`, `test.csv`, `sample_submission.csv`)
-- `outputs/submission.csv`: produced after running the final cell
-- `requirements.txt`: Python dependencies
 
 ---
 
@@ -85,15 +83,3 @@ This notebook prints:
 - A preview of the generated submission
 
 > Exact leaderboard score depends on the Optuna search outcome and run-to-run randomness.
-
----
-
-## Quickstart
-
-### 1) Setup environment
-```bash
-python -m venv .venv
-# Windows: .venv\Scripts\activate
-source .venv/bin/activate
-
-pip install -r requirements.txt
